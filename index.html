@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coding Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .slider {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 9s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+    .activities {
+      padding: 40px 20px;
+      background: #f4f4f4;
+    }
+
+    .activities h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .activity {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .activity img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .activity h3 {
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      background: #fff;
+      padding: 40px 20px;
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .activity {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .activity img {
+        margin: 0 0 15px 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Coding Club</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">What We Do</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Image Slider -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://via.placeholder.com/1200x300?text=Image+1" alt="Image 1" />
+      <img src="https://via.placeholder.com/1200x300?text=Image+2" alt="Image 2" />
+      <img src="https://via.placeholder.com/1200x300?text=Image+3" alt="Image 3" />
+    </div>
+  </div>
+
+  <!-- Activities Section -->
+  <div class="activities">
+    <h2>Our Activities</h2>
+
+    <div class="activity">
+      <img src="https://via.placeholder.com/150x100?text=Challenges" alt="Challenges" />
+      <div>
+        <h3>Weekly Coding Challenges</h3>
+        <p>Members participate in solving fun and educational programming problems.</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <img src="https://via.placeholder.com/150x100?text=Workshops" alt="Workshops" />
+      <div>
+        <h3>Workshops & Hackathons</h3>
+        <p>We organize events to build skills and foster collaboration.</p>
+      </div>
+    </div>
+
+    <div class="activity">
+      <img src="https://via.placeholder.com/150x100?text=Projects" alt="Projects" />
+      <div>
+        <h3>Project Collaborations</h3>
+        <p>Students team up to work on real-world tech projects.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Coding Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
